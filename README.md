@@ -2,16 +2,23 @@
 这是我的深度学习课程实验报告：Style-Conditioned LoRA Fine-Tuning of Qwen2.5-0.5B-Instruct（基于风格条件的LoRA对Qwen2.5-0.5B-Instruct的微调）
 
 ## 一、数据集构建与处理
+### 1.1 数据集的构建
 - 我选择风格的原则：风格间需明显可区分，确保微调效果可观察
 - 选择了3种风格：  
     | 类别 | 示例 |
     |------|------|
     | 古典/文学 | 文言文 |
-    | 地域方言 | 粤语风格 |
-    | 领域语气 | 新闻主播 |
+    | 特殊语气 | 调皮童趣风格 |
+    | 领域角色 | 新闻主播 |
 - 构建数据集：采用大模型生成（DeepSeek）
-- 数据集：[文言文数据（identity_wenyan.json）](/data/identity_wenyan.json) 、 [广东话数据（identity_Cantonese.jsonata）](/data/identity_Cantonese.json) 和 [新闻主播风格数据（identity_news_anchor.jsonata）](/data/identity_news_anchor.json)
+- 数据集：
+    - [文言文数据（identity_wenyan.json）](/data/identity_wenyan.json) 
+    - [调皮童趣风格数据（identity_Cantonese.jsonata）](/data/identity_playful_child.json)
+    - [新闻主播风格数据（identity_news_anchor.jsonata）](/data/identity_news_anchor.json)
 - 修改配置文件：[dataset_info.json#L5-L13](/data/dataset_info.json#L5-L13)
+
+### 1.2 分析
+- 使用
 
 ## 二、实验过程（使用llamafactory-cli指令）
 - 使用的是魔搭社区的模型：`$env:USE_MODELSCOPE_HUB = "1"`
