@@ -32,7 +32,7 @@
         8. 中英翻译
         9. 事实性问答
         10. 开放式观点
-    - 然ai生成
+    - 使用ai生成
 
 ## 二、实验过程（使用llamafactory-cli指令）
 - 使用的是魔搭社区的模型：`$env:USE_MODELSCOPE_HUB = "1"`
@@ -168,23 +168,13 @@
     8. 中英翻译
     9. 事实性问答
     10. 开放式观点
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- loss确实降低了：
+    |![alt text](MY_README/imgs/new_datasets_eval.png)|![alt text](MY_README/imgs/new_datasets_train.png)|
+    |:---:|:---:|
+    |验证集损失|训练集损失|
 
 ## 五、效果比较与案例学习
 - 原模型对话结果：[origin_model.md](MY_README/my_chat_results/origin_model.md)
 - Epochs不同，对话对比：[epochs_result.md](MY_README/my_chat_results/epochs_result.md)
 - Learning rate不同，对话对比：[learning_rate_result.md](MY_README/my_chat_results/learning_rate_result.md)
+- 数据集不同，对话对比：[newdatasets_result.md](MY_README/my_chat_results/newdatasets_result.md)
